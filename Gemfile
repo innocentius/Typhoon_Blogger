@@ -8,9 +8,10 @@ gem 'bcrypt-ruby', '3.1.2'
 gem 'faker', '1.1.2'
 gem 'will_paginate', '3.0.4'
 gem 'bootstrap-will_paginate', '0.0.9'
+gem 'sqlite3', '1.3.8'
 # Use sqlite3 as the database for Active Record
 group :development, :test do
-  gem 'sqlite3', '1.3.8'
+  
   gem 'rspec-rails', '2.13.1'
 end
 
