@@ -9,6 +9,9 @@
   <strong>Email:</strong>
   <%= @user.email %>
 </p>
+<p>
+  
+</p>
 <%= link_to 'Post', posts_path %> |
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
