@@ -11,7 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140408030805) do
+ActiveRecord::Schema.define(version: 20140429063630) do
+
+  create_table "comments", force: true do |t|
+    t.string "title"
+    t.text   "content"
+  end
 
   create_table "posts", force: true do |t|
     t.string   "title"
