@@ -1,11 +1,11 @@
+Given /^there exist a user$/ do
+  @user = User.create(name: "Example User", email: "user@example.com")
+end
 When /^they click link Users$/ do
   click_link "Users"
 end
 Then /^they should be directed to user page$/ do
   expect(page).to have_content("Listing users")
-end
-Given /^there exist a user$/ do
-  @user = User.create(name: "Example User", email: "user@example.com")
 end
 When /^they click the first link show$/ do
   click_link('Show')

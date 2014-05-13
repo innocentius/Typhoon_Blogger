@@ -9,4 +9,3 @@ Feature: Login
     Then they click link sign up!
     Then they should be redirected to the user profile page
     Then there should be no sign in link
-    

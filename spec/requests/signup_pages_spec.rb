@@ -4,16 +4,18 @@ describe "signup page" do
   describe "page" do
     before { visit signup_path }
 
-    it { should have_title('New user') }
+    it { should have_content('New user') }
   end
   describe "sign up" do
-    before { visit signup_path 
-    fill_in "Name",         with: "Example User"
-    fill_in "Email",        with: "user@example.com"
-    fill_in "Password",     with: "foobar"
-    fill_in "Confirm Password", with: "foobar"}
+    before do
+      visit signup_path
+      fill_in "Name",         with: "Example User"
+      fill_in "Email",        with: "user@example.com"
+      fill_in "Password",     with: "foobar"
+      fill_in "Confirm Password",      with: "foobar"
+    end
     it "should create a user" do
-      expect { click_button submit }.to change(User, :count).by(1)
+      expect { click_button "Submit"}.to change(User, :count).by(1)
     end
   end
 end

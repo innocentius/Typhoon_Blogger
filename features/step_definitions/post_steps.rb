@@ -1,5 +1,5 @@
 Given /^there exist a user$/ do
-  @user = User.create(name: "Example User", email: "user@example.com")
+  @user = User.create(name: "Example User", email: "user@example.com", password: "foobar", password_confirmation: "foobar")
 end
 When /^they click link Users$/ do
   click_link "Users"
