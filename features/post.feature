@@ -8,8 +8,6 @@ Feature: Post
     When they complete sign in form
     Then they click link sign in!
     Then they should be redirected to the user profile page
-    When they click the first link show
-    Then they should be directed to user 1 page
     Then they should see post link
     When they click link Post
     Then they should be directed to post page

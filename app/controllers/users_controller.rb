@@ -11,7 +11,7 @@ class UsersController < ApplicationController
       if current_user.admin?
         @users = User.all
       else 
-        @users = current_user
+        @users = [current_user]
       end
     else
       redirect_to (root_path)
