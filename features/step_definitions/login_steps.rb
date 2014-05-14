@@ -26,3 +26,7 @@ end
 Then /^there should be no sign in link$/ do
   expect(page).to_not have_link("Sign in")
 end
+
+Then /^there should be no sign up link$/ do
+  expect(page).to_not have_link("Sign up")
+end
