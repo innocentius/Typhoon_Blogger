@@ -7,6 +7,7 @@ Feature: Authentication
     Then they should be redirected to help page
   Scenario: When logined
     Given there exist a user
+    Given a user visit the home page
     When they click link Sign in
     Then they should be redirected to the sign in page
     When they complete sign in form

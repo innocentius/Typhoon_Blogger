@@ -1,8 +1,8 @@
 Feature: Admin
   Scenario: When login as administrator
     Given there exist two users
-    Given a user visit the home page
     Given the user is a administrator
+    Given a user visit the home page
     When they click link Sign in
     When they complete sign in form
     Then they click link sign in!

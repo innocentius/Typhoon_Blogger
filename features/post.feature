@@ -2,8 +2,12 @@ Feature: Post
   Scenario: At home page
     Given a user visit the home page
     Given there exist a user
-    When they click link Users
-    Then they should be directed to user page
+    Given a user visit the home page
+    When they click link Sign in
+    Then they should be redirected to the sign in page
+    When they complete sign in form
+    Then they click link sign in!
+    Then they should be redirected to the user profile page
     When they click the first link show
     Then they should be directed to user 1 page
     Then they should see post link

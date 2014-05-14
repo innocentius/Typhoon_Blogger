@@ -1,4 +1,5 @@
 When /^they click link Sign in$/ do
+  expect(page).to have_content('Sign in')
   click_link "Sign in"
 end
 Then /^they should be redirected to the sign in page$/ do

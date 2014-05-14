@@ -7,11 +7,14 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
-    
-    if current_user.admin?
-      @users = User.all
-    else 
-      @users = User.find(params[:id])
+    if signed_in?
+      if current_user.admin?
+        @users = User.all
+      else 
+        @users = current_user
+      end
+    else
+      redirect_to (root_path)
     end
   end
 
@@ -39,6 +42,7 @@ class UsersController < ApplicationController
       if @user.save
         format.html { redirect_to @user, notice: 'User was successfully created.' }
         format.json { render action: 'show', status: :created, location: @user }
+	
       else
         format.html { render action: 'new' }
         format.json { render json: @user.errors, status: :unprocessable_entity }
@@ -77,7 +81,7 @@ class UsersController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_user
       @user = User.find(params[:id])
-      redirect_to(root_url) unless current_user?(@user)
+      #redirect_to(root_url) unless current_user?(@user)
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
