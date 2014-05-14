@@ -17,6 +17,7 @@ Then /^they will be redirected to all user profile page$/ do
 end
 
 Given /^the user is a regular user$/ do
+  fill_in "Name",         with: "User1"
   fill_in "Email",        with: "user@example.com"
   fill_in "Password",     with: "foobar"
 end
